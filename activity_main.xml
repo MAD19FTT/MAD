@@ -1,45 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
-
-
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="RESET"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/green"
+        android:onClick="countUp"
         />
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="40sp"
-        />
-    
+        android:background="@drawable/circle"
+        android:onClick="pressCount">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="0"
+            android:textSize="40sp"
+            android:id="@+id/count"/>
+    </RelativeLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
         >
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/back"
+            android:layout_gravity="center_vertical"
             />
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ayat"
+            android:layout_weight="1"
             />
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/front"
+
             />
     </LinearLayout>
 
